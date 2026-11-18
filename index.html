@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precio de venta ponderado semanal por finca · 2026 · Agrícola Sara Palma</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/favicon.png">
+<style>
+:root{color-scheme:light;
+--color-fg:#0e2b29;--color-fg-muted:#4f6a66;--color-bg:#f2f8f5;--color-panel:#ffffff;--color-border-line:#d3e6de;--color-ok:#006300;--color-warn:#734500;--color-bad:#8e2626;
+--c1:#00897b;--c2:#c98500;--c3:#d9466a;--c4:#2e7d32;--c5:#5b6fd6;
+--font-anthropic-sans:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
+--cds-font-size-caption:12.5px;--cds-font-size-body:15px;--cds-font-size-heading:18px;--cds-font-size-title:32px;--cds-font-weight-medium:600;
+--cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:14px;--cds-gap-lg:22px;--cds-gap-xl:32px;--cds-pad-xs:4px;--cds-pad-sm:8px;--cds-pad-md:14px;--cds-pad-lg:20px;--cds-pad-xl:28px;--cds-radius:10px;
+--cds-chart-grid:#e6efeb;--cds-chart-axis:#b9cbc5;--cds-chart-reference:#6b807b;--cds-text-secondary:#4f6a66;
+--cds-surface-popover:#ffffff;--cds-border:#d3e6de;--cds-shadow-popover:0 6px 20px rgba(8,40,36,.14)}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+--color-fg:#f0efec;--color-fg-muted:#93a8a3;--color-bg:#0b1614;--color-panel:#14211f;--color-border-line:#25332f;--color-ok:#0ca30c;--color-warn:#db9300;--color-bad:#ec7e7e;
+--c1:#26a69a;--c2:#c98500;--c3:#e0607e;--c4:#3e9b47;--c5:#6f7fe0;
+--cds-chart-grid:#1f2d2a;--cds-chart-axis:#3a4d49;--cds-chart-reference:#8fa39f;--cds-text-secondary:#93a8a3;--cds-surface-popover:#1b2a27;--cds-border:#2c3d39;--cds-shadow-popover:0 6px 20px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(--font-anthropic-sans);font-size:var(--cds-font-size-body)}
+.pv-page{max-width:1280px;margin:0 auto;padding:24px 20px 40px}
+.dash-select{appearance:none;-webkit-appearance:none;font:inherit;font-size:13px;color:var(--color-fg);background-color:var(--color-panel);border:1px solid var(--color-border-line);border-radius:8px;height:36px;padding:0 30px 0 10px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236b807b' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;cursor:pointer;text-overflow:ellipsis}
+.dash-select:focus{outline:2px solid var(--c1);outline-offset:1px}
+.dash-skeleton{position:relative;color:transparent!important}
+.dash-skeleton>*{visibility:hidden}
+.dash-skeleton::after{content:"";position:absolute;inset:0;border-radius:8px;background:linear-gradient(90deg,var(--color-border-line),var(--color-bg),var(--color-border-line));background-size:200% 100%;animation:pvsk 1.4s infinite linear;opacity:.6}
+span.dash-skeleton::after,b.dash-skeleton::after{inset:20% 0;min-width:3em}
+@keyframes pvsk{to{background-position:-200% 0}}
+@media (prefers-reduced-motion: reduce){.dash-skeleton::after{animation:none}}
+</style>
+</head>
+<body>
+<main class="pv-page">
+<style>
+.pv{display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.pv h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0;line-height:1.2}
+.pv-eyebrow{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+.pv-take{color:var(--color-fg-muted);margin:10px 0 0;max-width:78ch;line-height:1.55}
+.pv-take b{color:var(--color-fg);font-weight:var(--cds-font-weight-medium);font-variant-numeric:tabular-nums}
+.pv-slicers{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--cds-gap-sm) var(--cds-gap-md);align-items:end;padding:var(--cds-pad-md);background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius)}
+.pv-slicers label{display:flex;flex-direction:column;gap:4px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);min-width:0}
+.pv-slicers select{width:100%;min-width:0}
+.pv-btn{font:inherit;font-size:var(--cds-font-size-caption);color:var(--color-fg);background-color:transparent;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:8px 12px;cursor:pointer;height:36px}
+.pv-btn:hover{background-color:var(--color-bg)}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:var(--cds-gap-md)}
+.pv-card,.pv-panel{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.pv-card{display:flex;flex-direction:column;gap:4px}
+.pv-k{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.pv-v{font-family:var(--font-anthropic-serif);font-weight:400;font-size:2rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.pv-s{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.pv-s b{font-weight:var(--cds-font-weight-medium);color:var(--color-fg)}
+.pv-s b.pv-up{color:var(--color-ok)}
+.pv-s b.pv-down{color:var(--color-bad)}
+.pv-panel h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.pv-sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:4px 0 14px;line-height:1.45}
+.pv-chart{position:relative;min-height:400px}
+.pv-heat{position:relative;min-height:480px;min-width:560px}
+.pv-rank{position:relative;min-height:560px}
+.pv-scroll{overflow-x:auto}
+.pv-tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:8px;padding:8px 10px;font-size:var(--cds-font-size-caption);line-height:1.5;opacity:0;white-space:nowrap;z-index:5;color:var(--color-fg);font-variant-numeric:tabular-nums}
+.pv-tip .t{font-weight:var(--cds-font-weight-medium);margin-bottom:2px}
+.pv-tip .m{color:var(--cds-text-secondary)}
+.pv-legend{display:flex;gap:6px 18px;flex-wrap:wrap;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:0 0 10px;align-items:center}
+.pv-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.pv-legend i.dash{height:0;border-top:2px dashed var(--cds-chart-reference);background:none}
+.pv-legend i.sq{width:12px;height:12px;border-radius:2px}
+.pv svg text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption);font-family:var(--font-anthropic-sans)}
+.pv svg .tick line{stroke:var(--cds-chart-grid)}
+.pv svg .domain{stroke:var(--cds-chart-axis)}
+.pv svg text.pv-strong{fill:var(--color-fg);font-weight:600}
+.pv-msg{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);padding:24px 0}
+.pv-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:var(--cds-gap-lg)}
+.pv-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-caption)}
+.pv-table th{text-align:left;font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted);padding:8px 8px;border-bottom:1px solid var(--color-border-line);cursor:pointer;white-space:nowrap;user-select:none}
+.pv-table th.n,.pv-table td.n{text-align:right}
+.pv-table th[aria-sort="descending"]::after{content:" ↓"}
+.pv-table th[aria-sort="ascending"]::after{content:" ↑"}
+.pv-table td{padding:7px 8px;border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.pv-table tbody tr{cursor:pointer}
+.pv-table tbody tr:hover td{background-color:color-mix(in oklab,var(--color-fg) 5%,transparent)}
+.pv-table tbody tr.sel td{background-color:color-mix(in oklab,var(--color-fg) 9%,transparent);font-weight:600}
+.pv-table tfoot td{font-weight:var(--cds-font-weight-medium);border-bottom:none;border-top:1px solid var(--color-fg-muted)}
+.pv-bar{display:block;height:4px;border-radius:2px;margin-top:3px;margin-left:auto}
+.pv-notes{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.55}
+.pv-notes summary{cursor:pointer;color:var(--color-fg)}
+.pv-notes li{margin:4px 0}
+.pv-cli-head{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm) var(--cds-gap-lg);align-items:end;margin:0 0 14px}
+.pv-cli-head label{display:flex;flex-direction:column;gap:4px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);min-width:min(100%,280px)}
+.pv-cli-head .pv-s{margin:0 0 8px}
+.pv-h3{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);margin:22px 0 0}
+.pv-heat-cli{position:relative;min-height:420px;min-width:680px}
+.pv-heat-cod{position:relative;min-height:440px;min-width:700px}
+.pv-sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:baseline}
+.pv-clase-tabla{margin-top:14px;max-width:560px}
+.pv{container-type:inline-size}
+.pv-hero{position:relative;overflow:hidden;background:#8bcab6;border-radius:calc(var(--cds-radius) * 2);padding:28px 32px 32px;min-height:300px;display:flex;align-items:center}
+.pv-hero-img{position:absolute;right:0;top:0;height:100%;width:62%;object-fit:cover;object-position:left center;pointer-events:none}
+.pv-hero-text{position:relative;max-width:52%;display:flex;flex-direction:column}
+.pv-logos{display:flex;align-items:center;gap:22px;margin-bottom:22px}
+.pv-logo-sp{height:58px;width:auto}
+.pv-logo-tb{height:40px;width:auto}
+.pv-hero .pv-eyebrow{color:#0b3d3a}
+.pv-hero h1{color:#06312e}
+.pv-hero .pv-take{color:#173f3b}
+.pv-hero .pv-take b{color:#06312e}
+@container (max-width: 760px){.pv-hero-img{display:none}.pv-hero-text{max-width:100%}.pv-hero{padding:22px}}
+.pv-panel h2{padding-left:12px;border-left:4px solid #8bcab6}
+.pv-foot{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:flex-end;gap:20px;padding:18px 24px;min-height:110px;border-top:1px solid var(--color-border-line)}
+.pv-foot-hoja{position:absolute;left:-10px;top:-40px;height:220px;width:auto;opacity:.5;pointer-events:none}
+.pv-foot-logos{position:relative;display:flex;align-items:center;gap:18px;background:#ffffff;border-radius:var(--cds-radius);padding:10px 14px}
+.pv-foot-logos img:first-child{height:44px;width:auto}
+.pv-foot-logos img:last-child{height:32px;width:auto}
+.pv-foot-txt{position:relative;margin-right:auto;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+@media print{.pv-hero-img{display:block}}
+</style>
+
+<div class="pv">
+  <header id="encabezado" class="pv-hero">
+    <img class="pv-hero-img" src="img/banano.webp" alt="">
+    <div class="pv-hero-text">
+      <div class="pv-logos">
+        <img src="img/sarapalma_blanco.png" alt="Agrícola Sara Palma S.A.S" class="pv-logo-sp">
+        <img src="img/turbana_blanco.png" alt="Turbana Foods" class="pv-logo-tb">
+      </div>
+      <p class="pv-eyebrow">Liquidación de embarques · Año 2026</p>
+      <h1>Precio de venta ponderado semanal por finca</h1>
+      <p class="pv-take" id="resumen">En 2026, <b data-draw="t-ambito">—</b> vendió a <b data-draw="t-precio" data-source="kpis" data-field="precio" data-row="0">—</b> US$ por caja (precio ponderado) sobre <b data-draw="t-cajas" data-source="kpis" data-field="cajas" data-row="0">—</b> cajas, entre las semanas <b data-draw="t-ini" data-source="kpis" data-field="sem_ini" data-row="0">—</b> y <b data-draw="t-fin" data-source="kpis" data-field="sem_fin" data-row="0">—</b>. Con los filtros actuales, la finca de mejor precio es <b data-draw="t-top" data-source="fincas" data-field="finca">—</b> (<b data-draw="t-top-p" data-source="fincas" data-field="precio">—</b>) y la de menor precio es <b data-draw="t-bot" data-source="fincas" data-field="finca">—</b> (<b data-draw="t-bot-p" data-source="fincas" data-field="precio">—</b>).</p>
+      <p class="pv-take" id="resumen-vacio" hidden>No hay embarques que cumplan los filtros elegidos. Prueba con otra combinación o usa «Limpiar filtros».</p>
+      </div>
+  </header>
+
+  <section id="filtros" class="pv-slicers" aria-label="Filtros">
+    <label>Finca<select class="dash-select" data-draw="f-finca" aria-label="Finca" data-source="liq"></select></label>
+    <label>Mes<select class="dash-select" data-draw="f-mes" aria-label="Mes" data-source="liq"></select></label>
+    <label>Semana desde<select class="dash-select" data-draw="f-desde" aria-label="Semana desde" data-source="liq"></select></label>
+    <label>Semana hasta<select class="dash-select" data-draw="f-hasta" aria-label="Semana hasta" data-source="liq"></select></label>
+    <label>Mercado<select class="dash-select" data-draw="f-mercado" aria-label="Mercado" data-source="liq"></select></label>
+    <label>Clase de fruta<select class="dash-select" data-draw="f-clase" aria-label="Clase de fruta" data-source="liq"></select></label>
+    <label>Cliente<select class="dash-select" data-draw="f-cliente" aria-label="Cliente" data-source="liq"></select></label>
+    <label>Código de caja<select class="dash-select" data-draw="f-codigo" aria-label="Código de caja" data-source="liq"></select></label>
+    <button type="button" class="pv-btn" id="pv-reset">Limpiar filtros</button>
+  </section>
+
+  <section id="indicadores" class="pv-cards" aria-label="Indicadores">
+    <div class="pv-card" id="kpi-precio">
+      <span class="pv-k">Precio ponderado (US$/caja)</span>
+      <span class="pv-v dash-skeleton" data-draw="k-precio" data-source="kpis" data-field="precio" data-row="0">—</span>
+      <span class="pv-s">Semanas <b data-draw="k-ini" data-source="kpis" data-field="sem_ini" data-row="0">—</b>–<b data-draw="k-fin" data-source="kpis" data-field="sem_fin" data-row="0">—</b> · Empresa: <b data-draw="k-precio-emp" data-source="kpis" data-field="precio_empresa" data-row="0">—</b></span>
+    </div>
+    <div class="pv-card" id="kpi-cajas">
+      <span class="pv-k">Total cajas</span>
+      <span class="pv-v dash-skeleton" data-draw="k-cajas" data-source="kpis" data-field="cajas" data-row="0">—</span>
+      <span class="pv-s"><b data-draw="k-cajas-cop" data-source="kpis" data-field="cajas_sin_precio_usd" data-row="0">—</b> cajas sin precio en US$ (fuera del ponderado)</span>
+    </div>
+    <div class="pv-card" id="kpi-ultima">
+      <span class="pv-k">Precio última semana (sem <span data-draw="k-fin2" data-source="kpis" data-field="sem_fin" data-row="0">—</span>)</span>
+      <span class="pv-v dash-skeleton" data-draw="k-precio-ult" data-source="kpis" data-field="precio_ult" data-row="0">—</span>
+      <span class="pv-s"><b data-draw="k-var-precio" data-source="kpis" data-field="var_precio" data-row="0">—</b> US$ vs semana <span data-draw="k-ant" data-source="kpis" data-field="sem_ant" data-row="0">—</span></span>
+    </div>
+    <div class="pv-card" id="kpi-cajas-ultima">
+      <span class="pv-k">Cajas última semana</span>
+      <span class="pv-v dash-skeleton" data-draw="k-cajas-ult" data-source="kpis" data-field="cajas_ult" data-row="0">—</span>
+      <span class="pv-s"><b data-draw="k-var-cajas" data-source="kpis" data-field="var_cajas_pct" data-row="0">—</b> vs semana <span data-draw="k-ant2" data-source="kpis" data-field="sem_ant" data-row="0">—</span></span>
+    </div>
+  </section>
+
+  <section class="pv-panel" id="evolucion-semanal">
+    <h2>Evolución semanal: precio ponderado y volumen de cajas</h2>
+    <p class="pv-sub">Arriba, el precio ponderado de cada semana; abajo, las cajas embarcadas. Al elegir una finca, la línea punteada muestra el total de la empresa para comparar. Pasa el cursor para ver el detalle de cada semana.</p>
+    <div class="pv-chart dash-skeleton" data-draw="evolucion" data-source="semanal"></div>
+  </section>
+
+  <section class="pv-panel" id="matriz-finca-semana">
+    <h2>Matriz finca × semana: precio ponderado</h2>
+    <p class="pv-sub">Cada celda es el precio ponderado de una finca en una semana; más oscuro es mayor precio. Las fincas van ordenadas por volumen de cajas. Haz clic en una finca para filtrar la página.</p>
+    <div class="pv-scroll"><div class="pv-heat dash-skeleton" data-draw="matriz" data-source="finca_semana fincas"></div></div>
+  </section>
+
+  <div class="pv-two">
+    <section class="pv-panel" id="ranking-fincas">
+      <h2>Ranking de precio por finca</h2>
+      <p class="pv-sub">Precio ponderado del periodo frente al promedio de la empresa (línea punteada). El tamaño del punto indica el volumen de cajas.</p>
+      <div class="pv-rank dash-skeleton" data-draw="ranking" data-source="fincas kpis"></div>
+    </section>
+
+    <section class="pv-panel" id="detalle-fincas">
+      <h2>Detalle por finca</h2>
+      <p class="pv-sub">Haz clic en un encabezado para ordenar y en una fila para filtrar por esa finca.</p>
+      <div class="pv-scroll">
+        <table class="pv-table" data-source="fincas" data-row-key="finca">
+          <thead><tr>
+            <th data-field="finca" data-sort="finca">Finca</th>
+            <th class="n" data-field="cajas" data-sort="cajas" aria-sort="descending">Cajas</th>
+            <th class="n" data-field="participacion" data-sort="participacion">% part.</th>
+            <th class="n" data-field="precio" data-sort="precio">Precio pond.</th>
+            <th class="n" data-field="precio_min_sem" data-sort="precio_min_sem">Mín. sem.</th>
+            <th class="n" data-field="precio_max_sem" data-sort="precio_max_sem">Máx. sem.</th>
+            <th class="n" data-field="semanas" data-sort="semanas">Semanas</th>
+          </tr></thead>
+          <tbody data-draw="detalle"></tbody>
+          <tfoot data-draw="detalle-total"></tfoot>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="pv-panel" id="codigos-finca">
+    <h2>Códigos exportados por finca: precio ponderado semanal</h2>
+    <p class="pv-sub">Para la finca elegida, cada fila es un código exportado y cada celda su precio ponderado en la semana; a la derecha, el precio ponderado del periodo y las cajas. Se muestran los 15 códigos con más cajas y el resto se agrupa en «Otros códigos». Solo mercado Exportación.</p>
+    <div class="pv-cli-head">
+      <label>Finca<select class="dash-select" data-draw="f-fcod" aria-label="Finca de la sección de códigos" data-source="liq"></select></label>
+      <p class="pv-s">Mostrando: <b data-draw="cod-finca">—</b></p>
+    </div>
+    <div class="pv-scroll"><div class="pv-heat-cod dash-skeleton" data-draw="matriz-codigos" data-source="codigo_semana codigos"></div></div>
+  </section>
+
+  <section class="pv-panel" id="clase-fruta">
+    <h2>Comportamiento por clase de fruta</h2>
+    <p class="pv-sub">Arriba, el precio ponderado semanal de cada clase; abajo, qué parte de las cajas de cada semana fue de cada clase. Esta sección responde a todos los filtros menos el de clase de fruta.</p>
+    <div class="pv-chart dash-skeleton" data-draw="clase-evolucion" data-source="clase_semana"></div>
+    <div class="pv-scroll">
+      <table class="pv-table pv-clase-tabla" data-source="clases" data-row-key="clase">
+        <thead><tr>
+          <th data-field="clase">Clase de fruta</th>
+          <th class="n" data-field="cajas">Cajas</th>
+          <th class="n" data-field="participacion">% part.</th>
+          <th class="n" data-field="precio">Precio pond.</th>
+        </tr></thead>
+        <tbody data-draw="clases-tabla"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pv-panel" id="precio-clientes">
+    <h2>Precio ponderado por cliente: semanal y acumulado 2026</h2>
+    <p class="pv-sub">El acumulado de cada semana es el precio ponderado desde la primera semana del periodo hasta esa semana. Elige un cliente en el selector o haz clic en una fila de la matriz. Esta sección responde a todos los filtros menos el de cliente, para poder compararlos entre sí.</p>
+    <div class="pv-cli-head">
+      <label>Cliente del gráfico<select class="dash-select" data-draw="f-cli" aria-label="Cliente del gráfico" data-source="clientes"></select></label>
+      <p class="pv-s">Acumulado 2026 de <b data-draw="c-nombre" data-source="clientes" data-field="cliente">—</b>: <b data-draw="c-precio" data-source="clientes" data-field="precio">—</b> US$/caja sobre <b data-draw="c-cajas" data-source="clientes" data-field="cajas">—</b> cajas (<b data-draw="c-part" data-source="clientes" data-field="participacion">—</b> del total).</p>
+    </div>
+    <div class="pv-chart dash-skeleton" data-draw="cliente-evolucion" data-source="cliente_semana empresa_acumulado"></div>
+    <h3 class="pv-h3" id="matriz-clientes-titulo">Matriz cliente × semana con acumulado 2026</h3>
+    <p class="pv-sub">Cada celda es el precio ponderado del cliente en la semana; las columnas de la derecha muestran su precio acumulado 2026 y sus cajas. Los clientes van ordenados por volumen.</p>
+    <div class="pv-scroll"><div class="pv-heat-cli dash-skeleton" data-draw="matriz-clientes" data-source="cliente_semana clientes"></div></div>
+  </section>
+
+  <details class="pv-notes" id="notas">
+    <summary>Cómo se calcula y notas sobre los datos</summary>
+    <ul>
+      <li><b>Precio ponderado</b> = Σ(precio de venta × cajas) ÷ Σ(cajas con precio en US$). Se calcula igual por semana, por finca y para el total.</li>
+      <li><b>Fuente:</b> hoja BD_Liq_Embarques del archivo «Evolución Mezcla y Precio de Venta», solo año 2026. Columnas usadas: Semana, Año, Cliente, Total cajas, Código y nombre de producto, Clase de fruta, Mercado, Finca, Precio de venta y Mes.</li>
+      <li><b>Precios en US$:</b> los códigos 4011, 4019, 4023 y 4024 venían con el precio en pesos; con la actualización del 17 de noviembre de 2026 ya están en dólares y entran al ponderado. Si alguna fila vuelve a traer un precio en pesos (mayor a 1.000), sus cajas cuentan en el volumen pero quedan fuera del ponderado.</li>
+      <li><b>Nombres de finca</b> sin tildes ni números (por ejemplo, Génesis1 → Genesis, Montecristo2 → Montecristo, Canthó → Cantho). La clase «Premium» se unificó con «PREMIUM».</li>
+      <li>La matriz, el ranking y el detalle muestran todas las fincas con los demás filtros aplicados; la finca elegida se resalta.</li>
+      <li><b>Acumulado 2026 por cliente</b> = Σ(precio × cajas) ÷ Σ(cajas con precio en US$) desde la primera semana del periodo elegido hasta cada semana. Sin filtro de semanas, va desde la semana 1 de 2026.</li>
+      <li><b>Códigos exportados</b>: solo mercado Exportación. Si una fila trae precio en pesos, su celda aparece punteada y sin precio.</li>
+      <li>Datos con corte a la semana 45 de 2026 (archivo cargado el 17 de noviembre de 2026).</li>
+    </ul>
+  </details>
+  <footer class="pv-foot" id="pie">
+    <img class="pv-foot-hoja" src="img/hoja.png" alt="">
+    <p class="pv-foot-txt">Agrícola Sara Palma S.A.S · Liquidación de embarques 2026</p>
+    <div class="pv-foot-logos">
+      <img src="img/sarapalma_color.png" alt="Agrícola Sara Palma S.A.S">
+      <img src="img/turbana_color.png" alt="Turbana Foods">
+    </div>
+  </footer>
+</div>
+
+<script src="js/d3.min.js"></script>
+<script src="js/dash.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/clientes.js"></script>
+<script src="js/extra.js"></script>
+
+<script>
+fetch('data/liq_embarques_2026.json').then((r) => r.json()).then((rows) => dash._load('liq', rows))
+  .catch(() => { document.querySelectorAll('.dash-skeleton').forEach((e) => e.classList.remove('dash-skeleton')); });
+</script>
+</main>
+</body>
+</html>
