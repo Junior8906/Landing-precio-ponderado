@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Precio de venta ponderado semanal por finca · 2026 · Agrícola Sara Palma</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="img/favicon.png">
+<link rel="icon" href="favicon.png">
 <style>
 :root{color-scheme:light;
 --color-fg:#0e2b29;--color-fg-muted:#4f6a66;--color-bg:#f2f8f5;--color-panel:#ffffff;--color-border-line:#d3e6de;--color-ok:#006300;--color-warn:#734500;--color-bad:#8e2626;
@@ -119,11 +119,11 @@ span.dash-skeleton::after,b.dash-skeleton::after{inset:20% 0;min-width:3em}
 
 <div class="pv">
   <header id="encabezado" class="pv-hero">
-    <img class="pv-hero-img" src="img/banano.webp" alt="">
+    <img class="pv-hero-img" src="banano.webp" alt="">
     <div class="pv-hero-text">
       <div class="pv-logos">
-        <img src="img/sarapalma_blanco.png" alt="Agrícola Sara Palma S.A.S" class="pv-logo-sp">
-        <img src="img/turbana_blanco.png" alt="Turbana Foods" class="pv-logo-tb">
+        <img src="sarapalma_blanco.png" alt="Agrícola Sara Palma S.A.S" class="pv-logo-sp">
+        <img src="turbana_blanco.png" alt="Turbana Foods" class="pv-logo-tb">
       </div>
       <p class="pv-eyebrow">Liquidación de embarques · Año 2026</p>
       <h1>Precio de venta ponderado semanal por finca</h1>
@@ -261,24 +261,24 @@ span.dash-skeleton::after,b.dash-skeleton::after{inset:20% 0;min-width:3em}
     </ul>
   </details>
   <footer class="pv-foot" id="pie">
-    <img class="pv-foot-hoja" src="img/hoja.png" alt="">
+    <img class="pv-foot-hoja" src="hoja.png" alt="">
     <p class="pv-foot-txt">Agrícola Sara Palma S.A.S · Liquidación de embarques 2026</p>
     <div class="pv-foot-logos">
-      <img src="img/sarapalma_color.png" alt="Agrícola Sara Palma S.A.S">
-      <img src="img/turbana_color.png" alt="Turbana Foods">
+      <img src="sarapalma_color.png" alt="Agrícola Sara Palma S.A.S">
+      <img src="turbana_color.png" alt="Turbana Foods">
     </div>
   </footer>
 </div>
 
-<script src="js/d3.min.js"></script>
-<script src="js/dash.js"></script>
-<script src="js/calc.js"></script>
-<script src="js/charts.js"></script>
-<script src="js/clientes.js"></script>
-<script src="js/extra.js"></script>
+<script src="d3.min.js"></script>
+<script src="dash.js"></script>
+<script src="calc.js"></script>
+<script src="charts.js"></script>
+<script src="clientes.js"></script>
+<script src="extra.js"></script>
 
 <script>
-fetch('data/liq_embarques_2026.json').then((r) => r.json()).then((rows) => dash._load('liq', rows))
+fetch('liq_embarques_2026.json').then((r) => r.json()).then((rows) => dash._load('liq', rows))
   .catch(() => { document.querySelectorAll('.dash-skeleton').forEach((e) => e.classList.remove('dash-skeleton')); });
 </script>
 </main>
